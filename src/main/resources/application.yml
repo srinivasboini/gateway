@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: alert-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: alert-service
+          uri: https://duck-model-loosely.ngrok-free.app
+          predicates:
+            - Path=/api/v1/**
+          filters:
+            - JwtTokenFilter
+            - StripPrefix=0
+
+clerk:
+  jwks-url: https://ruling-wolf-12.clerk.accounts.dev/.well-known/jwks.json 
