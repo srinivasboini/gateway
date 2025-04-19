@@ -18,6 +18,11 @@ spring:
           filters:
             - JwtTokenFilter
             - StripPrefix=0
+    kubernetes:
+      discovery:
+        enabled: true
+        all-namespaces: true
+        primary-port-name: http
 
 clerk:
   jwks-url: https://ruling-wolf-12.clerk.accounts.dev/.well-known/jwks.json 
