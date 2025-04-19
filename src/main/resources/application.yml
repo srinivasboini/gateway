@@ -24,6 +24,8 @@ spring:
         all-namespaces: false
         namespace: alerts-demo
         primary-port-name: http
+      health:
+        enabled: false
 
 clerk:
   jwks-url: https://ruling-wolf-12.clerk.accounts.dev/.well-known/jwks.json 
