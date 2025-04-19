@@ -41,4 +41,4 @@ jobs:
       run: ./mvnw spring-boot:build-image -Dspring-boot.build-image.imageName=${{ secrets.DOCKER_USERNAME }}/alert-gateway:${{ env.TAG }}
 
     - name: Push image to DockerHub
-      run: docker push ${{ secrets.DOCKER_USERNAME }}/alert-gateway:${{ env.TAG }} 
+      run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/alert-gateway:${{ env.TAG }} 
