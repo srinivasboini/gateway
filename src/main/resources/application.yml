@@ -6,9 +6,13 @@ spring:
     name: alert-gateway
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
       routes:
         - id: alert-service
-          uri: http://alerts-api.alerts-demo.svc.cluster.local
+          uri: lb://alerts-api
           predicates:
             - Path=/api/v1/**
           filters:
