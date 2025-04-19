@@ -90,9 +90,6 @@
 					</excludes>
 					<image>
 						<name>srinivasboini/alert-gateway</name>
-						<tags>
-							<tag>latest</tag>
-						</tags>
 					</image>
 				</configuration>
 			</plugin>
