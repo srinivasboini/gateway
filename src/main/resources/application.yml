@@ -21,7 +21,8 @@ spring:
     kubernetes:
       discovery:
         enabled: true
-        all-namespaces: true
+        all-namespaces: false
+        namespace: alerts-demo
         primary-port-name: http
 
 clerk:
