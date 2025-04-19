@@ -8,7 +8,7 @@ spring:
     gateway:
       routes:
         - id: alert-service
-          uri: https://duck-model-loosely.ngrok-free.app
+          uri: http://alerts-api.alerts-demo.svc.cluster.local
           predicates:
             - Path=/api/v1/**
           filters:
