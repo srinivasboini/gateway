@@ -27,5 +27,11 @@ spring:
       health:
         enabled: false
 
+logging:
+  pattern:
+    correlation: "[${spring.application.name:},%X{traceId:-},%X{spanId:-}] "
+  include-application-name: false
+
 clerk:
   jwks-url: https://ruling-wolf-12.clerk.accounts.dev/.well-known/jwks.json 
+
