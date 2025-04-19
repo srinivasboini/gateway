@@ -38,7 +38,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Build image with Spring Boot
-      run: ./mvnw spring-boot:build-image -Dspring-boot.build-image.imageName=${{ secrets.DOCKER_USERNAME }}/alert-gateway:${{ env.TAG }}
+      run: ./mvnw spring-boot:build-image -Dspring-boot.build-image.imageName=${{ secrets.DOCKERHUB_USERNAME }}/alert-gateway:${{ env.TAG }}
 
     - name: Push image to DockerHub
       run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/alert-gateway:${{ env.TAG }} 
